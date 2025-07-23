@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Calculator</title>
+  <style>
+    body {
+      background-color: #f2f2f2;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .calculator {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      padding: 20px;
+      width: 300px;
+    }
+
+    .display {
+      width: 100%;
+      height: 60px;
+      font-size: 24px;
+      text-align: right;
+      padding: 10px;
+      border: none;
+      background-color: #e9e9e9;
+      border-radius: 5px;
+      margin-bottom: 15px;
+    }
+
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+
+    .buttons button {
+      padding: 20px;
+      font-size: 18px;
+      border: none;
+      border-radius: 5px;
+      background-color: #007bff;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .buttons button:hover {
+      background-color: #0056b3;
+    }
+
+    .buttons .operator {
+      background-color: #28a745;
+    }
+
+    .buttons .operator:hover {
+      background-color: #1e7e34;
+    }
+
+    .buttons .clear {
+      background-color: #dc3545;
+    }
+
+    .buttons .clear:hover {
+      background-color: #c82333;
+    }
+
+    .buttons .equal {
+      background-color: #ffc107;
+      color: black;
+    }
+
+    .buttons .equal:hover {
+      background-color: #e0a800;
+    }
+  </style>
+</head>
+<body>
+
+<div class="calculator">
+  <input type="text" id="result" class="display" disabled>
+
+  <div class="buttons">
+    <button onclick="clearDisplay()" class="clear">C</button>
+    <button onclick="appendValue('(')">(</button>
+    <button onclick="appendValue(')')">)</button>
+    <button onclick="appendValue('/')" class="operator">÷</button>
+
+    <button onclick="appendValue('7')">7</button>
+    <button onclick="appendValue('8')">8</button>
+    <button onclick="appendValue('9')">9</button>
+    <button onclick="appendValue('*')" class="operator">×</button>
+
+    <button onclick="appendValue('4')">4</button>
+    <button onclick="appendValue('5')">5</button>
+    <button onclick="appendValue('6')">6</button>
+    <button onclick="appendValue('-')" class="operator">−</button>
+
+    <button onclick="appendValue('1')">1</button>
+    <button onclick="appendValue('2')">2</button>
+    <button onclick="appendValue('3')">3</button>
+    <button onclick="appendValue('+')" class="operator">+</button>
+
+    <button onclick="appendValue('0')">0</button>
+    <button onclick="appendValue('.')">.</button>
+    <button onclick="calculateResult()" class="equal">=</button>
+  </div>
+</div>
+
+<script>
+  function appendValue(val) {
+    document.getElementById("result").value += val;
+  }
+
+  function clearDisplay() {
+    document.getElementById("result").value = '';
+  }
+
+  function calculateResult() {
+    try {
+      document.getElementById("result").value = eval(document.getElementById("result").value);
+    } catch (e) {
+      alert("Invalid Expression");
+    }
+  }
+</script>
+
+</body>
+</html>

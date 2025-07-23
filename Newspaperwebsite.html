@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <style>
+        .HeaderinHome{
+            display: flex;
+            flex-direction: rows; 
+        }
+        #div1{
+            flex : 1;
+            background-color:  rgb(217, 229, 237);
+        }
+        #div2{
+            flex : 2;
+            background-color: rgb(215, 183, 183);
+            padding: 5px 30px 20px 5px;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            background-color: rgb(215, 183, 183);
+            max-width: 500px; 
+            padding-top:18px;
+            padding-left: 590px;
+        }
+        #navitem{
+            width: 100%;
+            color: rgb(131, 23, 41);
+            padding: 10px 25px;
+            border-radius: 40px ;  
+            text-decoration: none;  
+        }
+           .contentcard a:hover {
+                background-color: #005f99;
+         }
+
+        .scrolley{
+            background-attachment: fixed;
+            background-color: blanchedalmond;
+        }
+        .footerforscreen{
+            padding: 15px;
+            text-align: center; background-color: rgb(205, 152, 87); 
+        }
+    </style> 
+    </head>
+    <body>
+        <div class="HeaderinHome"><div id="div1"><Tittle><h1 id="tity" style="color: red;" >📰 Daily News</h1></Tittle></div>
+        <div id="div2">
+            <nav>   
+                <a href="Home.html" target="screen"  id="navitem">Home</a>
+                 <a href="politics.html" target="screen" id="navitem">Politics</a>
+                  <a href="Technology.html" target="screen" id="navitem">Technology</a>
+                <a href="movies.html" target="screen" id="navitem" >Entertainment</a>
+               
+                <a href="sports.html" target="screen" id="navitem">Sports</a>
+            </nav>
+        </div>
+        </div>      
+    <div >
+    <marquee behavior="scroll" direction="left" class="scrolley">
+      🔴 Breaking: Parliament passes new bill — Tech giants under scrutiny — India wins series 3-1 — Market hits all-time high
+    </marquee>
+    </div>
+    <div>
+        <iframe src="Home.html" name="screen" width="100%" height="600px"></iframe>
+    </div>
+    <div class="footerforscreen">
+        © 2025 My Daily News | Contact: info@mydailynews.com
+    </div>
+    </body>
+</html>

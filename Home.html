@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>News Homepage</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f5f5f5;
+    }
+ 
+    .category-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      padding: 20px;
+    }
+
+    .category-card {
+      display: flex;
+      flex-direction: row;
+      background-color: white;
+      gap: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      padding: 15px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .category-card:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .cardimg img {
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .contentcard {
+      flex: 1;
+      padding: 0px 0px 0px 10px;
+    }
+
+    .contentcard h3 {
+      color: #333;
+      margin-top: 0;
+    }
+
+    .contentcard p {
+      font-size: 14px;
+      color: #555;
+    }
+
+    .contentcard a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 16px;
+      background-color: #007acc;
+      color: white;
+      text-decoration: none;
+      border-radius: 20px;
+    }
+
+    .contentcard a:hover {
+      background-color: #005f99;
+    }
+
+    .top-news {
+      text-align: center;
+      padding: 20px;
+      background-color: white;
+    }
+
+    .top-news img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .top-news h2 {
+      color: darkblue;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="top-news">
+    <img src="topnewsimg.jpg" alt="Top News">
+    <h2>🌍 Global Climate Summit Begins in Paris</h2>
+    <p>Leaders from 150 countries gather to address climate change.</p>
+  </div>
+  <div class="category-grid">
+    
+    <div class="category-card">
+      <div class="cardimg"><img src="flightimg.avif" alt="Politics"></div>
+      <div class="contentcard">
+        <h3>DailyNews</h3>
+        <p>Kolkata-bound Air India flight aborts take-off at Delhi airport due to technical snag</p>
+        <a href="politics.html" target="screen">Visit</a>
+      </div>
+    </div>
+
+    <div class="category-card">
+      <div class="cardimg"><img src="techimg.png" alt="Technology"></div>
+      <div class="contentcard">
+        <h3>Technology</h3>
+        <p>Apple foldables, CoinDCX breach, Baby Grok AI, Google/Meta ad investigation, and more tech headlines.</p>
+        <a href="Technology.html" target="screen">Visit</a>
+      </div>
+    </div>
+
+    <div class="category-card">
+      <div class="cardimg"><img src="movieimg.jpeg" alt="Entertainment"></div>
+      <div class="contentcard">
+        <h3>Entertainment</h3>
+        <p>🎬 Latest celebrity news, new trailers, and upcoming Oscar predictions.</p>
+        <a href="movies.html" target="screen">Visit</a>
+      </div>
+    </div>
+
+    <div class="category-card">
+      <div class="cardimg"><img src="sportimg.avif" alt="Sports"></div>
+      <div class="contentcard">
+        <h3>Sports</h3>
+        <p>🏏 India beats Australia 3-1 in T20 series. Football transfer drama unfolds.</p>
+        <a href="sports.html" target="screen">Visit</a>
+      </div>
+    </div> 
+
+  </div>
+
+</div>
+
+</body>
+</html>
